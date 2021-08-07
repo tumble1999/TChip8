@@ -1,0 +1,16 @@
+set(BUILD_SHARED_LIBS TRUE)
+find_package(PkgConfig REQUIRED)
+
+# SDL
+find_package(SDL2 REQUIRED)
+
+set(TEMU_LIBS
+	${SDL2_LIBRARIES}
+
+	PARENT_SCOPE
+)
+set(TEMU_INCLUDE
+	${SDL2_INCLUDE_DIRS}
+
+	PARENT_SCOPE
+)
